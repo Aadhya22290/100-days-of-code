@@ -1,0 +1,26 @@
+//Count positive, negative, and zero elements in an array.
+
+#include <stdio.h>
+int main() {
+    int n, i;
+    
+    int positive = 0, negative = 0, zero = 0;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+        if(arr[i] > 0) {
+            positive++; //increment positive count
+        } else if(arr[i] < 0) {
+            negative++; //increment negative count
+        } else {
+            zero++; //increment zero count
+        }
+    }
+    printf("Positive numbers count: %d\n", positive);
+    printf("Negative numbers count: %d\n", negative);
+    printf("Zero count: %d\n", zero);
+    return 0;
+}
